@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,54 +8,83 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <title>TicTacToe</title>
-    
-</head>
-<body>
 
-    <table>
-        <tr>
-            <td onclick="fillShape(1)">
-                <img id="circal-1" class="img d-none" src="/img/circle.png">
-                <img id="cross-1" class="img d-none" src="/img/cross.png">
-            </td>
-            <td onclick="fillShape(2)">
-                <img id="circal-2" class="img d-none" src="/img/circle.png">
-                <img id="cross-2" class="img d-none" src="/img/cross.png">
-            </td>
-            <td onclick="fillShape(3)">
-                <img id="circal-3" class="img d-none" src="/img/circle.png">
-                <img id="cross-3" class="img d-none" src="/img/cross.png">
-            </td>
-        </tr>
-        <tr>
-            <td onclick="fillShape(4)">
-                <img id="circal-4" class="img d-none" src="/img/circle.png">
-                <img id="cross-4" class="img d-none" src="/img/cross.png">
-            </td>
-            <td onclick="fillShape(5)">
-                <img id="circal-5" class="img d-none" src="/img/circle.png">
-                <img id="cross-5" class="img d-none" src="/img/cross.png">
-            </td>
-            <td onclick="fillShape(6)">
-                <img id="circal-6" class="img d-none" src="/img/circle.png">
-                <img id="cross-6" class="img d-none" src="/img/cross.png">
-            </td>
-        </tr>
-        <tr>
-            <td onclick="fillShape(7)">
-                <img id="circal-7" class="img d-none" src="/img/circle.png">
-                <img id="cross-7" class="img d-none" src="/img/cross.png">
-            </td>
-            <td onclick="fillShape(8)">
-                <img id="circal-8" class="img d-none" src="/img/circle.png">
-                <img id="cross-8" class="img d-none" src="/img/cross.png">
-            </td>
-            <td onclick="fillShape(9)">
-                <img id="circal-9" class="img d-none" src="/img/circle.png">
-                <img id="cross-9" class="img d-none" src="/img/cross.png">
-            </td>
-        </tr>
-    </table>
+</head>
+
+<body>
+    <img id="game-over" class="game-over d-none" src="img/game-g777b266e8_1920.jpg">
+    <button onclick="restart()" id="restart-btn" class="restart-btn d-none">Restart</button>
     
+    <div class="match-field">
+    <div class="player-container">
+        <div id="player-1"><img src="img/icons8-raumschiff-blue.png">
+            Player 1</div>
+        <div id="player-2" class="player-inactiv"><img src="img/icons8-raumschiff-red.png">
+            Player 2</div>
+    </div>
+
+    <div class="game-container">
+        <div id="line-1" class="horizontal-line" style="top: 60px;"></div>
+        <div id="line-2" class="horizontal-line" style="top: 200px;"></div>
+        <div id="line-3" class="horizontal-line" style="top: 340px;"></div>
+        <div id="line-4" class="horizontal-line make-vertikal" style="left: -134px; top: 202px;"></div>
+        <div id="line-5" class="horizontal-line make-vertikal" style="left: 7px; top: 202px;"></div>
+        <div id="line-6" class="horizontal-line make-vertikal" style="left: 146px; top: 202px;"></div>
+        <div id="line-7" class="horizontal-line" style="top: 193px; transform: rotate(45deg) scaleX(0.0);"></div>
+        <div id="line-8" class="horizontal-line" style="top: 208px; transform: rotate(-45deg) scaleX(0.0);"></div>
+        <table class="table">
+            <tr>
+                <td onclick="fillShape(1)">
+                    <img id="circal-1" class="img d-none" src="img/icons8-raumschiff-blue.png">
+                    <img id="cross-1" class="img d-none" src="img/icons8-raumschiff-red.png">
+                </td>
+                <td onclick="fillShape(2)">
+                    <img id="circal-2" class="img d-none" src="img/icons8-raumschiff-blue.png">
+                    <img id="cross-2" class="img d-none" src="img/icons8-raumschiff-red.png">
+                </td>
+                <td onclick="fillShape(3)">
+                    <img id="circal-3" class="img d-none" src="img/icons8-raumschiff-blue.png">
+                    <img id="cross-3" class="img d-none" src="img/icons8-raumschiff-red.png">
+                </td>
+            </tr>
+            <tr>
+                <td onclick="fillShape(4)">
+                    <img id="circal-4" class="img d-none" src="img/icons8-raumschiff-blue.png">
+                    <img id="cross-4" class="img d-none" src="img/icons8-raumschiff-red.png">
+                </td>
+                <td onclick="fillShape(5)">
+                    <img id="circal-5" class="img d-none" src="img/icons8-raumschiff-blue.png">
+                    <img id="cross-5" class="img d-none" src="img/icons8-raumschiff-red.png">
+                </td>
+                <td onclick="fillShape(6)">
+                    <img id="circal-6" class="img d-none" src="img/icons8-raumschiff-blue.png">
+                    <img id="cross-6" class="img d-none" src="img/icons8-raumschiff-red.png">
+                </td>
+            </tr>
+            <tr>
+                <td onclick="fillShape(7)">
+                    <img id="circal-7" class="img d-none" src="img/icons8-raumschiff-blue.png">
+                    <img id="cross-7" class="img d-none" src="img/icons8-raumschiff-red.png">
+                </td>
+                <td onclick="fillShape(8)">
+                    <img id="circal-8" class="img d-none" src="img/icons8-raumschiff-blue.png">
+                    <img id="cross-8" class="img d-none" src="img/icons8-raumschiff-red.png">
+                </td>
+                <td onclick="fillShape(9)">
+                    <img id="circal-9" class="img d-none" src="img/icons8-raumschiff-blue.png">
+                    <img id="cross-9" class="img d-none" src="img/icons8-raumschiff-red.png">
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<footer>
+    <a target="_blank" href="https://icons8.com/icon/105869/raumschiff">Raumschiff</a> icon by <a target="_blank"
+        href="https://icons8.com">Icons8</a>
+    <a target="_blank" href="https://icons8.com/icon/105869/raumschiff">Raumschiff</a> icon by <a target="_blank"
+        href="https://icons8.com">Icons8</a>
+    </footer>
 </body>
+
 </html>

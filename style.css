@@ -1,3 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('img/eclipse-g764aabed5_1920.jpg');
+    background-position: center;
+}
+
+footer {
+    bottom: 0px;
+    position: absolute;
+}
+
+.match-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 450px;
+    height: 600px;
+    background-color: rgb(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.player-container {
+    display: flex;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.player-container img {
+    height: 60px;
+    width: 60px;
+}
+
+.player-container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+.player-inactiv {
+    opacity: 0.5;
+}
+
 tr {
     width: 399px;
 }
@@ -44,4 +95,106 @@ table {
 
 .d-none {
     display: none;
+}
+
+.horizontal-line {
+    width: 400px;
+    height: 10px;
+    background-color: gray;
+    position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+    z-index: 1;
+}
+
+.make-vertikal {
+    transform: rotate(90deg) scaleX(0.0);
+}
+
+.game-container {
+    position: relative;
+}
+
+.game-over {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+    animation: zoom 225ms ease-in-out;
+}
+
+@keyframes zoomIN {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.restart-btn {
+    border: 1px solid rgb(0, 0, 0, 0.5);
+    background-color: #1C0B7F;
+    z-index: 2;
+    width: 300px;
+    height: 100px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 60px;
+}
+
+.restart-btn:hover {
+    background-color: rgb(59, 40, 168);
+}
+
+@media screen and (max-width:64em) {}
+
+@media screen and (max-width:48em) {
+    .horizontal-line {
+        display: none;
+      }
+}
+
+@media screen and (max-width:35.5em) {
+    .match-field {
+        width: 280px;
+        height: 400px;
+    }
+
+    .img {
+        width: 50px;
+        height: 50px;
+        left: 17px;
+        top: 17px;
+    }
+
+    td {
+        width: 80px;
+        height: 80px;
+    }
+
+    .player-container img {
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+    }
+
+    .player-container div {
+        font-size: 15px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    .horizontal-line {
+      display: none;
+    }
+
 }
