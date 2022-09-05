@@ -20,6 +20,12 @@
             <button onclick="restart()" id="restart-btn" class="restart-btn d-none">Restart</button>
         </div>
     </div>
+    <div id="game-over-container" class="d-none">
+        <div class="game-over">
+            <h1 id="draw" class="d-none">Unentschieden</h1>
+            <button onclick="restart()" id="restart-btn2" class="restart-btn d-none">Restart</button>
+        </div>
+    </div>
 
 
     <div class="match-field">
@@ -31,14 +37,14 @@
         </div>
 
         <div class="game-container">
-            <div id="line-1" class="horizontal-line" style="top: 60px;"></div>
-            <div id="line-2" class="horizontal-line" style="top: 200px;"></div>
-            <div id="line-3" class="horizontal-line" style="top: 340px;"></div>
-            <div id="line-4" class="horizontal-line make-vertikal" style="left: -134px; top: 202px;"></div>
-            <div id="line-5" class="horizontal-line make-vertikal" style="left: 7px; top: 202px;"></div>
-            <div id="line-6" class="horizontal-line make-vertikal" style="left: 146px; top: 202px;"></div>
-            <div id="line-7" class="horizontal-line" style="top: 193px; transform: rotate(45deg) scaleX(0.0);"></div>
-            <div id="line-8" class="horizontal-line" style="top: 208px; transform: rotate(-45deg) scaleX(0.0);"></div>
+            <div id="line-1" class="horizontal-line1"></div>
+            <div id="line-2" class="horizontal-line2"></div>
+            <div id="line-3" class="horizontal-line3"></div>
+            <div id="line-4" class="horizontal-line-make-vertikal1"></div>
+            <div id="line-5" class="horizontal-line-make-vertikal2"></div>
+            <div id="line-6" class="horizontal-line-make-vertikal3"></div>
+            <div id="line-7" class="horizontal-line-across1"></div>
+            <div id="line-8" class="horizontal-line-across2"></div>
             <table class="table">
                 <tr>
                     <td onclick="fillShape(1)">

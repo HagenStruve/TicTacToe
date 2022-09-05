@@ -8,6 +8,7 @@ body {
     background-image: url('img/eclipse-g764aabed5_1920.jpg');
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 footer {
@@ -98,7 +99,7 @@ table {
     display: none;
 }
 
-.horizontal-line {
+.horizontal-line1 {
     width: 400px;
     height: 10px;
     background-color: gray;
@@ -106,10 +107,92 @@ table {
     transform: scaleX(0.0);
     transition: transform 225ms ease-in-out;
     z-index: 1;
+    top: 60px;
 }
 
-.make-vertikal {
+.horizontal-line2 {
+    width: 400px;
+    height: 10px;
+    background-color: gray;
+    position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+    z-index: 1;
+    top: 200px;
+}
+
+.horizontal-line3 {
+    width: 400px;
+    height: 10px;
+    background-color: gray;
+    position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+    z-index: 1;
+    top: 340px;
+}
+
+.horizontal-line-make-vertikal1 {
+    width: 400px;
+    height: 10px;
+    background-color: gray;
+    position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+    z-index: 1;
     transform: rotate(90deg) scaleX(0.0);
+    left: -134px;
+    top: 202px;
+}
+
+.horizontal-line-make-vertikal2 {
+    width: 400px;
+    height: 10px;
+    background-color: gray;
+    position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+    z-index: 1;
+    transform: rotate(90deg) scaleX(0.0);
+    left: 7px;
+    top: 202px;
+}
+
+.horizontal-line-make-vertikal3 {
+    width: 400px;
+    height: 10px;
+    background-color: gray;
+    position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+    z-index: 1;
+    transform: rotate(90deg) scaleX(0.0);
+    left: 146px;
+    top: 202px;
+}
+
+.horizontal-line-across1 {
+    width: 450px;
+    height: 10px;
+    background-color: gray;
+    position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+    z-index: 1;
+    top: 218px;
+    transform: rotate(45deg) scaleX(0.0);
+}
+
+.horizontal-line-across2 {
+    width: 450px;
+    height: 10px;
+    background-color: gray;
+    position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+    z-index: 1;
+    top: 187px;
+    transform: rotate(-45deg) scaleX(0.0);
 }
 
 .game-container {
@@ -151,7 +234,7 @@ table {
 
 .restart-btn {
     border: 1px solid rgb(0, 0, 0, 0.5);
-    background-color: #1C0B7F;
+    background-color: #717072;
     z-index: 2;
     width: 300px;
     height: 100px;
@@ -159,34 +242,14 @@ table {
     font-size: 40px;
     cursor: pointer;
     bottom: 60px;
+    border-radius: 10px;
 }
 
 .restart-btn:hover {
     background-color: rgb(59, 40, 168);
 }
 
-@media screen and (max-width:64em) {
-    .game-over {
-        width: 500px;
-        height: 500px;
-    }
-
-    .game-over-img {
-        width: 180px;
-        height: 180px;
-        margin-bottom: 30px;
-    }
-
-    .restart-btn {
-        width: 300px;
-        height: 100px;
-}
-}
-
-@media screen and (max-width:48em) {
-    .horizontal-line {
-        display: none;
-    }
+@media only screen and (max-width: 480px) {
 
     .game-over {
         width: 350px;
@@ -202,10 +265,87 @@ table {
     .restart-btn {
         width: 250px;
         height: 70px;
-}
+    }
+
+    td {
+        width: 100px;
+        height: 100px;
+    }
+
+    .match-field {
+        height: 450px;
+        width: 380px;
+    }
+
+    .img {
+        width: 60px;
+        height: 60px;
+        left: 17px;
+        top: 17px;
+    }
+
+    .player-container img {
+        height: 50px;
+        width: 50px;
+        margin-right: 8px;
+    }
+
+    .horizontal-line-across1 {
+        width: 350px;
+        height: 6px;
+        top: 169px;
+    }
+
+    .horizontal-line-across2 {
+        width: 350px;
+        height: 6px;
+        top: 139px;
+    }
+
+    .horizontal-line1 {
+        width: 316px;
+        height: 6px;
+        top: 44px;
+    }
+
+    .horizontal-line2 {
+        width: 316px;
+        height: 6px;
+        top: 153px;
+    }
+
+    .horizontal-line3 {
+        width: 316px;
+        height: 6px;
+        top: 262px;
+    }
+
+    .horizontal-line-make-vertikal1 {
+        width: 316px;
+        height: 6px;
+        transform: rotate(90deg) scaleX(1.0);
+        left: -111px;
+        top: 156px;
+    }
+
+    .horizontal-line-make-vertikal2 {
+        width: 316px;
+        height: 6px;
+        transform: rotate(90deg) scaleX(1.0);
+        top: 156px;
+        left: -4px;
+    }
+
+    .horizontal-line-make-vertikal3 {
+        width: 316px;
+        height: 6px;
+        transform: rotate(90deg) scaleX(1.0);
+        top: 156px;
+        left: 103px;
+    }
 }
 
-@media screen and (max-width:35.5em) {
+@media only screen and (max-width: 400px) {
     .match-field {
         width: 280px;
         height: 400px;
@@ -237,10 +377,6 @@ table {
         font-size: 12px;
     }
 
-    .horizontal-line {
-        display: none;
-    }
-
     .game-over {
         width: 250px;
         height: 250px;
@@ -254,5 +390,59 @@ table {
     .restart-btn {
         width: 200px;
         height: 50px;
-}
+    }
+
+    .horizontal-line-across1 {
+        width: 280px;
+        height: 6px;
+        top: 136px;
+    }
+
+    .horizontal-line-across2 {
+        width: 280px;
+        height: 6px;
+        top: 115px;
+    }
+
+    .horizontal-line1 {
+        width: 260px;
+        height: 6px;
+        top: 36px;
+    }
+
+    .horizontal-line2 {
+        width: 260px;
+        height: 6px;
+        top: 122px;
+    }
+
+    .horizontal-line3 {
+        width: 260px;
+        height: 6px;
+        top: 208px;
+    }
+
+    .horizontal-line-make-vertikal1 {
+        width: 260px;
+        height: 6px;
+        transform: rotate(90deg) scaleX(1.0);
+        left: -77px;
+        top: 123px;
+    }
+
+    .horizontal-line-make-vertikal2 {
+        width: 260px;
+        height: 6px;
+        transform: rotate(90deg) scaleX(1.0);
+        top: 123px;
+        left: 0px;
+    }
+
+    .horizontal-line-make-vertikal3 {
+        width: 260px;
+        height: 6px;
+        transform: rotate(90deg) scaleX(1.0);
+        top: 123px;
+        left: 99px;
+    }
 }
